@@ -7,7 +7,7 @@ use std::ops::{Add, Mul, Sub};
 /// A single RGB-888 color.
 // This must be repr(C) in order to directly upload to the GPU.
 #[repr(C)]
-#[derive(Copy, Clone, Default)]
+#[derive(Copy, Clone, Default, Eq, PartialEq, Debug)]
 pub struct Color {
     /// The red component.
     pub r: u8,
